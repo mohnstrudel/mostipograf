@@ -29,6 +29,8 @@ gem 'bootstrap-sass', '~> 3.3.4.1'
 # Required for deploy to heroku
 gem 'rails_12factor'
 
+gem 'font-awesome-sass'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

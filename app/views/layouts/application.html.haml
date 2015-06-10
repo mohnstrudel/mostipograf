@@ -7,8 +7,12 @@
 	= javascript_include_tag 'application', 'data-turbolinks-track' => true
 	= csrf_meta_tags
 
-%body
+%body.space-top
+
+#preloader
+	#spinner
 
 = render 'layouts/navigation'
 
 = yield
+
