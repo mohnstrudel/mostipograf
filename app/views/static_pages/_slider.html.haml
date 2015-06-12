@@ -1,0 +1,60 @@
+/ Hero Unit with slider
+%section.hero
+	.container
+		.row
+			.hero-slider
+				.slide.first-slide
+					.col-lg-12.col-md-12.col-sm-12.animated
+						%h2.text-light.test-left{ style: "margin-top:150px;" }Печать вашего тиража в надежных руках!
+						%p 100% гарантия изготовления качественной полиграфической продукции точно в срок
+						%p Рассчитать стоимость тиража сейчас:
+		.row
+			.col-lg-12
+				.wizard
+					.header
+						%h3 Стоимость тиража
+					%form#wizard-form.wizard-form.body{ method: "post", role: "form"}
+						.tab-links-wrap
+							.tabs
+								.tab.row.fade.in.active#contact		
+									.col-lg-12
+										.row
+											.col-lg-3.col-md-6.col-sm-12.form-group
+												%label{ for: "name"} Хочу напечатать
+											.col-lg-3.col-md-6.col-sm-12.form-group
+												%select
+													%option{ disabled: true} Выберите категорию
+													%option Hello
+													%option No
+
+											.col-lg-3.col-md-6.col-sm-12.form-group
+												%label{ for: "connection" } Связяться со мной
+											.col-lg-3.col-md-6.col-sm-12.form-group
+												%select
+													%option Выберите тип связи
+													%option Телефон
+													%option Голубь
+										.row
+											.col-lg-3.col-md-6.col-sm-12.form-group
+												%label{ for: "uploadTemplate"} Загрузить макет
+											.col-lg-3.col-md-6.col-sm-12.form-group
+												.fileUpload
+													%span Upload
+													%input.upload#FileUpload{type: "file"}
+
+											.col-lg-3.col-md-6.col-sm-12.form-group
+												%input.form-control#name1{ type: "text", name: "name", placeholder: "Ваше имя", required: true }
+											.col-lg-3.col-md-6.col-sm-12.form-group
+												%input.form-control#email{ type: "email", name: "email", placeholder: "Ваша почта", required: true }
+										.row
+											.col-lg-6.col-md-6.col-sm-6.form-group
+												%label{ for: "name"} Примечания
+												%textarea.form-control{ rows: 5}
+
+											.col-lg-3.col-md-6.col-sm-12.form-group
+												%input.form-control#security{ type: "text", name: "security", placeholder: "Ваш телефон", required: true }
+											.col-lg-3.col-md-6.col-sm-12.form-group
+												%button.btn.btn-primary.btn-block{ type: "submit" } Отправить
+							.wizard-footer.group
+								.buttons
+									%a.btn.btn-primary Hey

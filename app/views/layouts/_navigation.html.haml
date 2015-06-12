@@ -1,0 +1,46 @@
+%header.stiky-header
+  .container.group
+    %a.logo{href: "index.html"}
+      %img{src:"img/logo-dark.png", alt: "Ultima"}
+        %a.logo-mobile{href: "index.html"}
+          %img{src: "img/logo-mobile.png", alt: "Ultima"}
+    .navi-toggle.group
+      %span.dot
+        %span.line
+      %span.dot
+        %span.line
+      %span.dot
+        %span.line
+      %span.dot
+        %span.line
+    %a.btn.btn-primary.btn-login{href: "#", "data-toggle" => "modal", "data-target" => "#loginModal"}
+      %i.fa.fa-user Login
+    .nav.main-navi
+      %ul
+        %li.active
+          %a.scroll-up{ href: "#" } Главная
+        %li.has-dropdown
+          %a.scroll{ href: "#features"} 
+            Услуги
+            %i.fa.fa-caret-down
+          %ul.dropdown
+            %li
+              %a{ href: "#" }Submenu Item
+              %a{ href: "#" }Submenu Item
+              %a{ href: "#" }Submenu Item
+              %a{ href: "#" }Submenu Item
+        %li.has-dropdown
+          %a{ href: "coming-soon.html"} 
+            Опыт
+            %i.fa.fa-caret-down
+          %ul.dropdown
+            %li
+              %a{ href: "#" } Submenu Item
+            %li
+              %a{ href: "#" } Submenu Item
+            %li   
+              %a{ href: "#" } Submenu Item
+        %li
+          %a{ href: "cs-page.html" } Качество
+        %li
+          =link_to 'Клиенты', '#'
