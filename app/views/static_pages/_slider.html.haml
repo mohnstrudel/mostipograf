@@ -12,7 +12,7 @@
 			.col-lg-12
 				.wizard
 					.header
-						%h3 Стоимость тиража
+						%h3 Рассчитать стоимость тиража сейчас:
 					%form#wizard-form.wizard-form.body{ method: "post", role: "form"}
 						.tab-links-wrap
 							.tabs
@@ -22,7 +22,7 @@
 											.col-lg-3.col-md-6.col-sm-12.form-group
 												%label{ for: "name"} Хочу напечатать
 											.col-lg-3.col-md-6.col-sm-12.form-group
-												%select
+												%select.selectpicker.form-control.show-tick#basic
 													%option{ disabled: true} Выберите категорию
 													%option Hello
 													%option No
@@ -30,7 +30,7 @@
 											.col-lg-3.col-md-6.col-sm-12.form-group
 												%label{ for: "connection" } Связяться со мной
 											.col-lg-3.col-md-6.col-sm-12.form-group
-												%select
+												%select.selectpicker#basic
 													%option Выберите тип связи
 													%option Телефон
 													%option Голубь
@@ -39,7 +39,7 @@
 												%label{ for: "uploadTemplate"} Загрузить макет
 											.col-lg-3.col-md-6.col-sm-12.form-group
 												.fileUpload
-													%span Upload
+													%span Выбрать файл
 													%input.upload#FileUpload{type: "file"}
 
 											.col-lg-3.col-md-6.col-sm-12.form-group
@@ -55,6 +55,3 @@
 												%input.form-control#security{ type: "text", name: "security", placeholder: "Ваш телефон", required: true }
 											.col-lg-3.col-md-6.col-sm-12.form-group
 												%button.btn.btn-primary.btn-block{ type: "submit" } Отправить
-							.wizard-footer.group
-								.buttons
-									%a.btn.btn-primary Hey
