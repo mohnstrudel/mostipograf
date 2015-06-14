@@ -1,0 +1,26 @@
+/ Gallery
+
+%section.page-block#gallery
+	.container
+		.row.page-header
+			%h2 Наши работы
+			%span Немного описания
+
+		.row
+			.gallery
+				%li
+					=link_to '#',  data: { largesrc: "gallery/1.jpg", title: "City Center", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." } do
+						=image_tag 'gallery/th_1.png', alt: 'thumb01'
+						%span.img-caption City Center
+				%li
+					=link_to '#',  data: { largesrc: "gallery/2.jpg", title: "Beach Van", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." } do
+						=image_tag 'gallery/th_2.png', alt: 'thumb02'
+						%span.img-caption Beach Van
+				%li
+					=link_to '#',  data: { largesrc: "gallery/3.jpg", title: "Tea Pot", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." } do
+						=image_tag 'gallery/th_3.png', alt: 'thumb03'
+						%span.img-caption Tea Pot
+				%li
+					=link_to '#',  data: { largesrc: "gallery/4.jpg", title: "Railway Station", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." } do
+						=image_tag 'gallery/th_4.png', alt: 'thumb04'
+						%span.img-caption Railway Station
