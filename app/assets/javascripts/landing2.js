@@ -1,4 +1,4 @@
-//Ultima HTML5 Landing Page v2.2
+//Ultima HTML5 Landing Page v2.3
 //Copyright 2014 8Guild.com
 //All scripts for Ultima Landing Page version #2
 

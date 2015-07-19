@@ -1,22 +1,49 @@
-//Ultima HTML5 Landing Page v2.2
+//Ultima HTML5 Landing Page v2.3
 //Copyright 2014 8Guild.com
-//All scripts for Ultima Components and Styles Page
+//All scripts for Ultima Landing Page version #2
 
+/*Page Preloading*/
+$(window).load(function() {
+	$('#spinner').fadeOut();
+	$('#preloader').delay(300).fadeOut('slow');
+	setTimeout(function(){$('.first-slide div:first-child').addClass('fadeInDown');},100);
+	setTimeout(function(){$('.first-slide div:last-child').addClass('fadeInRight');},100);
+	setTimeout(function(){$('.color-switcher').addClass('slideInLeft');},100);
+});
+
+/*Checking if it's touch device we disable some functionality due to inconsistency*/
+if (Modernizr.touch) { 
+	$('*').removeClass('animated');
+}
 
 /*Document Ready*/
 $(document).ready(function(e) {
 	
-	/*Vertically Center Side Navigation*/
-	var sideNav = $('.side-navi');
-	var sideNavH = sideNav.innerHeight();
-	var sideNavMT = -sideNavH/2;
-	$('.side-navi').css('margin-top', sideNavMT);
+	
+	/********Responsive Navigation**********/
+	$('.navi-toggle').on('click',function(){
+		$('.main-navi').toggleClass('open');
+	});
+	
+	$('.main-navi .has-dropdown a i').click(function(){
+		$(this).parent().parent().find('.dropdown').toggleClass('expanded');
+		return false
+	});
+	
+	/*Hero Slider*/
+	$('.hero-slider').bxSlider({
+		mode: 'fade',
+		adaptiveHeight: true,
+		controls: false,
+		video: true,
+		touchEnabled: false
+	});
 	
 	////////////////////////////////////////////////////////////
 	//INTERNAL ANCHOR LINKS SCROLLING (NAVIGATION)
 	$(".scroll").click(function(event){		
 		event.preventDefault();
-		$('html, body').animate({scrollTop:$(this.hash).offset().top}, 1000, 'easeInOutQuart');
+		$('html, body').animate({scrollTop:$(this.hash).offset().top-80}, 1000, 'easeInOutQuart');
 	});
 	
 	/*Scroll Up*/
@@ -36,7 +63,7 @@ $(document).ready(function(e) {
 	//SCROLL-SPY
 	// Cache selectors
 	var lastId,
-		topMenu = $(".side-navi"),
+		topMenu = $(".main-navi"),
 		topMenuHeight = topMenu.outerHeight(),
 		// All list items
 		menuItems = topMenu.find("a"),
@@ -49,7 +76,7 @@ $(document).ready(function(e) {
 	// Bind to scroll
 	$(window).scroll(function(){
 	   // Get container scroll position
-	   var fromTop = $(this).scrollTop()+topMenuHeight-150;
+	   var fromTop = $(this).scrollTop()+topMenuHeight+200;
 	   
 	   // Get id of current scroll item
 	   var cur = scrollItems.map(function(){
@@ -64,39 +91,12 @@ $(document).ready(function(e) {
 		   lastId = id;
 		   // Set/remove active class
 		   menuItems
-			 .parent().removeClass("current")
-			 .end().filter("[href=#"+id+"]").parent().addClass("current");
-	   }
-	});
-	// Bind to load
-	$(window).load(function(){
-	   // Get container scroll position
-	   var fromTop = $(this).scrollTop()+topMenuHeight-150;
-	   
-	   // Get id of current scroll item
-	   var cur = scrollItems.map(function(){
-		 if ($(this).offset().top < fromTop)
-		   return this;
-	   });
-	   // Get the id of the current element
-	   cur = cur[cur.length-1];
-	   var id = cur && cur.length ? cur[0].id : "";
-	   
-	   if (lastId !== id) {
-		   lastId = id;
-		   // Set/remove active class
-		   menuItems
-			 .parent().removeClass("current")
-			 .end().filter("[href=#"+id+"]").parent().addClass("current");
+			 .parent().removeClass("active")
+			 .end().filter("[href=#"+id+"]").parent().addClass("active");
 	   }
 	});
 	////////////////////////////////////////////////////////////////////
 	
-	/*Custom Style Checkboxes and Radios*/
-	$('input').iCheck({
-    checkboxClass: 'icheckbox',
-    radioClass: 'iradio'
-  });	
 	
 	//Enable Touch / swipe events for carousel 
 	$(".carousel-inner").swipe( {
@@ -116,25 +116,24 @@ $(document).ready(function(e) {
 	
 	/*Gallery Plugin Initializing*/
 	Grid.init();
+	/*Custom Style Checkboxes and Radios*/
+	$('input').iCheck({
+    checkboxClass: 'icheckbox',
+    radioClass: 'iradio'
+  });	
+	
+	/*Adding Placeholder Support in Older Browsers*/
+	$('input, textarea').placeholder();
 	
 	/*Tooltips*/
 	$('.tooltipped').tooltip();
 	
-	/*Countdown*/
-	$('.countdown').countdown('2015/05/15', function(event) {
-    $(this).html(event.strftime('%D:%H:%M:%S'));
-  });
-
-	/*Form Validation*/
-	$("#form-validation").validate();
-		
-	/*Components & Styles Page Link Prevent Default Behavior*/
-	if($('.buttons-demo a').length > 0){
-		$('.buttons-demo a').click(function(e){
-			e.preventDefault();
-		});	
-	}
+	/*Login Form Validation*/
+	$('.login-form').validate();
 	
+	/*Subscriptions Form Validation*/
+	$('.subscribe-form').validate();
+
 
 ////////////////////////////*APPLICATION WIZARD*/////////////////////////
 
@@ -339,6 +338,7 @@ $(document).ready(function(e) {
 		$('.animated-legend').addClass('fadeInRight')
 	}, { offset: '75%', triggerOnce: true });
 	
+
 });/*/Document ready*/
 
 

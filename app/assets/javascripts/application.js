@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require_tree ../../../vendor/assets/javascripts/plugins
+//= require_tree ../../../vendor/assets/javascripts/libs
+//= require plugins/gallery
+//= require_tree ../../../vendor/assets/javascripts
+//= require landing2
