@@ -116,6 +116,7 @@ $(document).ready(function(e) {
 	
 	/*Gallery Plugin Initializing*/
 	Grid.init();
+	console.log("Grid initialized");
 	/*Custom Style Checkboxes and Radios*/
 	$('input').iCheck({
     checkboxClass: 'icheckbox',

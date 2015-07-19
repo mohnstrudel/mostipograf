@@ -13,9 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require libs/modernizr.custom
 //= require_tree ../../../vendor/assets/javascripts/plugins
 //= require_tree ../../../vendor/assets/javascripts/libs
-//= require plugins/gallery
 //= require_tree ../../../vendor/assets/javascripts
-//= require landing2
+//= require_tree .
+
