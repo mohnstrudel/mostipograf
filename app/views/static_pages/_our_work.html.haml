@@ -9,9 +9,19 @@
 		
 		%ul.gallery
 			%li
-				=link_to "#",  data: { largesrc: "assets/gallery/1.jpg", title: "City Center", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." } do
+				=link_to "#",  data: { largesrc: "gallery/1.jpg", title: "City Center", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." } do
 					=image_tag 'gallery/th_1.png', alt: 'thumb01'
 					%span.img-caption City Center
+				.gall-expander
+					.gall-expander-inner
+						%span.gall-close
+						.gall-fullimg
+							.gall-loading
+							=image_tag 'gallery/2.jpg'
+						.gall-details
+							%h3 Bla bla
+							%p Hohoho
+							=link_to "http://google.com", 'Visit website'
 			%li
 				=link_to '#',  data: { largesrc: "gallery/2.jpg", title: "Beach Van", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." } do
 					=image_tag 'gallery/th_2.png', alt: 'thumb02'

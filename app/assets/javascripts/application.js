@@ -12,6 +12,7 @@
 //
 //= require libs/modernizr.custom
 //= require turbolinks
-//= require_tree ../../../vendor/assets/javascripts
+//= require_tree ../../../vendor/assets/javascripts/libs
+//= require_tree ../../../vendor/assets/javascripts/plugins
 //= require_tree .
 //= require landing2
