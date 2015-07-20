@@ -10,12 +10,8 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
 //= require libs/modernizr.custom
-//= require_tree ../../../vendor/assets/javascripts/plugins
-//= require_tree ../../../vendor/assets/javascripts/libs
+//= require turbolinks
 //= require_tree ../../../vendor/assets/javascripts
 //= require_tree .
-
+//= require landing2
