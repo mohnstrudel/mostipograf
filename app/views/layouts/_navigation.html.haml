@@ -1,9 +1,7 @@
 %header.stiky-header
   .container.group
-    %a.logo{href: "index.html"}
-      %img{src:"img/logo-dark.png", alt: "Ultima"}
-        %a.logo-mobile{href: "index.html"}
-          %img{src: "img/logo-mobile.png", alt: "Ultima"}
+    =link_to root_path do
+      =image_tag 'main/logo.png', alt: 'Первая Московская Типография', width: 300, style: 'display:inline;'
     .navi-toggle.group
       %span.dot
         %span.line
