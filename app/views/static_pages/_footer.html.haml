@@ -1,0 +1,26 @@
+%footer.footer
+  .container
+    .row
+      .col-lg-12
+        %h2.text-center.text-light Подпишитесь на нашу рассылку
+        %p.text-light.text-center Подпишитесь сейчас и мы будем информировать вас о скидочных предложениях (не чаще, чем раз в месяц)
+    .row
+      / Begin MailChimp Signup Form
+      %form#mc-embedded-subscribe-form.subscribe-form.validate{:action => "http://8guild.us3.list-manage.com/subscribe/post?u=168a366a98d3248fbc35c0b67&amp;id=73d49e0d23", :method => "post", :name => "mc-embedded-subscribe-form", :novalidate => "", :target => "_blank"}
+        .form-group.col-lg-7.col-md-8.col-sm-8.col-lg-offset-1
+          %label.sr-only{:for => "mce-EMAIL"} Ваша почта
+          %input#mce-EMAIL.form-control{:name => "EMAIL", :placeholder => "Enter email", :required => "", :type => "email"}
+            / real people should not fill this in and expect good things - do not remove this or risk form bot signups
+            %div{:style => "position: absolute; left: -5000px;"}
+              %input{:name => "b_168a366a98d3248fbc35c0b67_73d49e0d23", :type => "text", :value => ""}/
+        .form-group.col-lg-3.col-md-4.col-sm-4
+          %input#mc-embedded-subscribe.btn.btn-primary.btn-block{:name => "subscribe", :type => "submit", :value => "Subscribe"}/
+      / Close MailChimp Signup Form
+    .row
+      .col-lg-12
+        %p.copyright
+          \&copy; 2015 Первая Московская Типография. Все права защищены.
+          / %a{:href => "http://8guild.com/", :target => "_blank"} 8Guild
+/ Scroll To Top Button
+#scroll-top.scroll-up
+  %i.icon-arrow-up

@@ -1,0 +1,23 @@
+%section.page-block.color#testimonials
+	.container
+		.row.page-header
+			%h2.text-light С кем мы работаем
+			%span.text-light Можно ещё немного текста добавить
+
+		.row
+			.testimonials-slider.carousel.slide#testimonials-slider{'data-ride': 'carousel'}
+				%ol.carousel-indicators
+					%li.active{'data-target': '#testimonials-slider', 'data-slide-to': '0'}
+					%li{'data-target': '#testimonials-slider', 'data-slide-to': '1'}
+					%li{'data-target': '#testimonials-slider', 'data-slide-to': '2'}
+
+				.carousel-inner
+					.item.active
+						.container
+							.row
+								.col-lg-3.col-md-3.col-sm-4
+									=image_tag 'testimonials/dirk.png', class: 'img-circle img-center', width: 192, height: 192, alt: 'Dexter Dirk'
+								.col-lg-9.col-md-9.sol-sm-8
+									%blockquote
+										%p.text-light Lorem ipsum text. Integer psuere erat a ante
+										%footer.text-light Dexter Dirk

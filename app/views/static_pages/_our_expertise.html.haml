@@ -1,0 +1,31 @@
+.container-fluid
+	.row
+		%ul.nav.nav-tabs.central
+			%li.active
+				=link_to 'Наш опыт','#nash_opyt', data: { toggle: 'tab' }
+			%li 
+				=link_to 'Цифры о нас', '#cifry_o_nas', data: { toggle: 'tab' }
+			%li 
+				=link_to 'Ещё что-то', '#more',  data: { toggle: 'tab' }
+
+.container
+	.row.tab-content.central
+		.tab-pane.fade.in.active.col-lg-12#clean-code
+			.row
+				.col-lg-6.col-md-6.animated.fadeInLeft
+					=image_tag 'features/1.jpg', alt: "Clean Code"
+				.col-lg-6.col-md-6.animated.fadeInRight
+					.row
+						.col-lg-12
+							%h2 Clean code
+							%p.double-space-bottom Hellas lorem ipsum
+					.row
+						.col-lg-2
+							%i.feature-icon.icon-support
+						.col-lg-10
+							%p.double-space-bottom Some more lorem ipsum hipster took the iphone
+					.row		
+						.col-lg-2
+							%i.feature-icon.icon-map
+						.col-lg-10
+							%p.double-space-bottom Some more lorem ipsum hipster took the iphone

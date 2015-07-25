@@ -1,0 +1,43 @@
+%section.page-block.faq#faq
+	.container
+	.row.page-header
+		%h2 6 причин выбрать нас
+		%span Немного подзаголовка
+	.row
+		.col-lg-3.col-md-4.col-sm-4
+			=image_tag 'reasons/faq-icon.png', class: 'img-center', alt: "FAQ"
+
+		.col-lg-8.col-md-8.col-sm.8
+			.panel-group#accordion-faq
+				.panel
+					=link_to '#collapse1', class: 'panel-heading collapsed', data: { toggle: 'collapse', parent: '#accordion-faq'} do
+						Изготовление печатной продукции под «ключ»
+						.indicator
+							.icon
+								%span.hr-line
+								%span.vr-line
+					.panel-collapse.collapse#collapse1
+						.panel-body
+							Мы выполним все работы от дизайна до печати
+
+				.panel
+					=link_to '#collapse2', class: 'panel-heading collapsed', data: { toggle: 'collapse', parent: '#accordion-faq'} do
+						Минимальные сроки
+						.indicator
+							.icon
+								%span.hr-line
+								%span.vr-line
+					.panel-collapse.collapse#collapse2
+						.panel-body
+							Наше производство работает 24 часа
+
+				.panel
+					=link_to '#collapse3', class: 'panel-heading collapsed', data: { toggle: 'collapse', parent: '#accordion-faq'} do
+						Выгодно
+						.indicator
+							.icon
+								%span.hr-line
+								%span.vr-line
+					.panel-collapse.collapse#collapse3
+						.panel-body
+							Скидка на печать до 50% при больших тиражах
